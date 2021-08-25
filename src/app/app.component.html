@@ -1,0 +1,38 @@
+
+<div class="columns main-col-bul">
+  <div class="column is-half is-offset-one-quarter">
+    <h1 class="title">What Dog Are You ?</h1>
+    <div>
+      <label>Enter Tempermate (1 - 10) <i>10 being very patient...</i></label>
+      <div>
+        <input (input)="onChangeLength($event.target.value)" />
+      </div>
+      <h2>Please Check all boxes that apply...</h2>
+      <label>Loyal </label>
+      <input type="checkbox" (change)="isLoyal()" />
+      <div>
+        <label>Obidient </label>
+      <input type="checkbox" (change)="isObidient()" />
+      </div>
+      <div>
+        <label>Fearful </label>
+      <input type="checkbox" (change)="isFearful()" />
+      </div>
+      <div>
+        <label>Active </label>
+      <input type="checkbox" (change)="isActive()" />
+      </div>
+      <div>
+        <label>Fat </label>
+      <input type="checkbox" (change)="isFat()" />
+      </div>
+      <button (click)="onButtonClick()">What Dog Am I ?</button>
+      <div>
+        <h3>{{dog}}</h3>
+        <img [src]="dogPhoto" *ngIf="dog">
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
